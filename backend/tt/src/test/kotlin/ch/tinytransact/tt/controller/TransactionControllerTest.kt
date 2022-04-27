@@ -27,11 +27,11 @@ internal class TransactionControllerTest {
 
     @Test
     fun `should return transaction with id 1`() {
-        mockMvc.get("/transactions/{id}")
+        mockMvc.get("/transactions/1")
             .andDo { print() }
             .andExpect {
                 status { isOk() }
-                jsonPath("$[0].id"){ value("1") }
+                jsonPath("$.id"){ value("1") }
             }
     }
 }

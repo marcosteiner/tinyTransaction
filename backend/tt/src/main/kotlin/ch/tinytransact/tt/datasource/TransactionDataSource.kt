@@ -4,4 +4,5 @@ import ch.tinytransact.tt.model.Transaction
 
 interface TransactionDataSource {
     fun getTransactions(): Collection<Transaction>
+    fun getTransactionById(id: Int): Transaction
 }

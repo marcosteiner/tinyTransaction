@@ -7,4 +7,7 @@ import org.springframework.stereotype.Service
 @Service
 class TransactionService(private val transactionDataSource: TransactionDataSource) {
     fun getTransactions(): Collection<Transaction> = transactionDataSource.getTransactions()
+    fun getTransactionById(id: Int): Transaction {
+        return transactionDataSource.getTransactionById(id)
+    }
 }
